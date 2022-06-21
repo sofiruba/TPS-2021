@@ -1,0 +1,27 @@
+﻿
+
+@{
+    ViewData["Title"] = "BDAgenda";
+}
+
+<center>
+    <div class="container" style="margin: 5%;">
+    @{
+        foreach(Contacto c in @ViewBag.Listado){
+            <div class="card" style="width: 18rem; margin: 5%;">
+                <img class="card-img-top" src="@c.URLFoto" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@c.Nombre @c.Apellido</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Email: @c.Email</li>
+                    <li class="list-group-item">Telefono: @c.Telefono</li>
+                </ul>
+                <div class="card-body">
+                    <a href='@Url.Action("VerContacto", "Home", new{IdContacto = @c.IdContacto})' class="card-link">Ver detalle contacto</a>
+                </div>
+                </div>
+        }
+    }
+</div>
+</center>

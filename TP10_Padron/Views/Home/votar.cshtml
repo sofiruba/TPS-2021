@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Votar";
+}
+
+<center>
+  @ViewBag.mensaje
+  <form method="post" action='@Url.Action("Votar","Home")'>
+    Dni: <input type="number" name="dni" readonly="readonly" value ="@ViewBag.dni"/> <br/> <br/>
+    Numero de tramite:<input type="number" name="numeroTramite"/>
+  <input type="submit" value="votar">
+</form>
+
+Nombre: @ViewBag.Nombre
+Apellido: @ViewBag.Apellido
+@ViewBag.NroTramite
+</center>

@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Detalle contacto";
+}
+
+
+<div class="container">
+    Nombre: <input class="form-control" type="text" style="margin: 2%;" placeholder="@ViewBag.Nombre @ViewBag.Apellido" readonly>
+    Telefono: <input class="form-control" type="text" style="margin: 2%;" placeholder="@ViewBag.Telefono" readonly>
+    Email: <input class="form-control" type="text" style="margin: 2%;" placeholder="@ViewBag.Email" readonly>
+    <img src="@ViewBag.URLFoto">
+</div>

@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<center>
+    @ViewBag.mensaje
+    <form method="GET" action='@Url.Action("ConsultaPadron","Home")'>
+        Dni:<input type="number" name="DNI" />
+        <input type="submit" value="aceptar">
+    </form>
+</center>
+
+
